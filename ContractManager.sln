@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractManager.Server", "ContractManager.Server\ContractManager.Server.csproj", "{CD286A66-4FA0-48CD-96D0-3B94ACF61981}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "contractmanager.client", "contractmanager.client\contractmanager.client.esproj", "{F36BB94C-CA02-4E12-AA59-CCA383AB9849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD286A66-4FA0-48CD-96D0-3B94ACF61981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD286A66-4FA0-48CD-96D0-3B94ACF61981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD286A66-4FA0-48CD-96D0-3B94ACF61981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD286A66-4FA0-48CD-96D0-3B94ACF61981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36BB94C-CA02-4E12-AA59-CCA383AB9849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36BB94C-CA02-4E12-AA59-CCA383AB9849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36BB94C-CA02-4E12-AA59-CCA383AB9849}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F36BB94C-CA02-4E12-AA59-CCA383AB9849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36BB94C-CA02-4E12-AA59-CCA383AB9849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36BB94C-CA02-4E12-AA59-CCA383AB9849}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6A985AC-D249-4EBE-BE6A-E091CDFFCFAE}
+	EndGlobalSection
+EndGlobal
