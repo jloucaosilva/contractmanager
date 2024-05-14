@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace ContractManager.Server.Controllers
 {
@@ -11,11 +15,11 @@ namespace ContractManager.Server.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger logger)
         {
-            _logger = logger;
+            _logger = logger.ForContext<WeatherForecastController>();
         }
 
         [HttpGet(Name = "GetWeatherForecast")]

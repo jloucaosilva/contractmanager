@@ -1,3 +1,5 @@
+using System;
+
 namespace ContractManager.Server
 {
     public class WeatherForecast

@@ -1,41 +1,57 @@
 
+using System;
+using ContractManager.Server.Utilities;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
+
 namespace ContractManager.Server
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            Log.Logger = LoggerSetup.BootstrapLogger();
 
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            var app = builder.Build();
-
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            try
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                var host = CreateHostBuilder(args).Build();
+                host.Run();
             }
-
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-
-            app.MapControllers();
-
-            app.MapFallbackToFile("/index.html");
-
-            app.Run();
+            catch (Exception e)
+            {
+                Log.Fatal(e, e.Message);
+                throw;
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
+        }
+        
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args)
+                .ConfigureServices(
+                    (_, services) =>
+                    {
+                        services.Configure<HostOptions>(options =>
+                        {
+                            options.ShutdownTimeout = TimeSpan.FromSeconds(20);
+                        });
+                    })
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>()
+#if DEBUG
+                        .CaptureStartupErrors(true);
+#else
+                        .CaptureStartupErrors(false);
+#endif
+                })
+                .UseSerilog(LoggerSetup.BuildHostLogger, true);
         }
     }
 }
