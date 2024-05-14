@@ -49,7 +49,7 @@
         data(): Data {
             return {
                 loading: false,
-                post: null
+                post: null,
             };
         },
         created() {
@@ -59,7 +59,7 @@
         },
         watch: {
             // call again the method if the route changes
-            '$route': 'fetchData'
+            '$route': 'fetchData',
         },
         methods: {
             fetchData(): void {
@@ -73,7 +73,7 @@
                         this.loading = false;
                         return;
                     });
-            }
+            },
         },
     });
 </script>
