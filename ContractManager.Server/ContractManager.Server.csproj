@@ -30,4 +30,8 @@
     <ProjectReference Include="..\Mappings\Mappings.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>
