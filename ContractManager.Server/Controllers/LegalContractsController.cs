@@ -17,7 +17,7 @@ namespace ContractManager.Server.Controllers;
 /// Controller for managing legal contracts
 /// </summary>
 [ApiController]
-[Route("[controller]")]
+[Route("legalcontracts")]
 public class LegalContractsController : Controller
 {
     private readonly ILogger _logger;
@@ -69,7 +69,7 @@ public class LegalContractsController : Controller
     /// <returns>A list of <see cref="LegalContract"/></returns>
     [HttpGet]
     [ProducesResponseType(typeof(IEnumerable<LegalContractResponse>), (int)HttpStatusCode.OK)]
-    public async Task<ActionResult<IEnumerable<LegalContractResponse>>> Get()
+    public async Task<ActionResult<IEnumerable<LegalContractResponse>>> GetAll()
     {
         _logger.Information("{Tracer}|Retrieving all legal contracts", "CC9ECCA4-7F52-4EF9-8DF8-4700C811A81B");
         var legalContracts = await _legalContractRepository.GetAllAsync();
