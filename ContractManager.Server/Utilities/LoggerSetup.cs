@@ -9,8 +9,15 @@ using Serilog.Sinks.SystemConsole.Themes;
 
 namespace ContractManager.Server.Utilities;
 
+/// <summary>
+/// Extension methods for configuring the logger
+/// </summary>
 public class LoggerSetup
 {
+    /// <summary>
+    /// Configures the logger for the application
+    /// </summary>
+    /// <returns>The setup <see cref="ILogger"/> instance</returns>
     public static ILogger BootstrapLogger()
     {
         var logger = new LoggerConfiguration();
@@ -21,7 +28,13 @@ public class LoggerSetup
                 .CreateBootstrapLogger();
     }
     
-    public static void BuildHostLogger(HostBuilderContext context, IServiceProvider serviceProvider,LoggerConfiguration loggerConfiguration)
+    /// <summary>
+    /// Configures the logger for the application
+    /// </summary>
+    /// <param name="context">The <see cref="HostBuilderContext"/> instance</param>
+    /// <param name="serviceProvider">The <see cref="IServiceProvider"/> instance</param>
+    /// <param name="loggerConfiguration">The <see cref="LoggerConfiguration"/> instance</param>
+    public static void BuildHostLogger(HostBuilderContext context, IServiceProvider serviceProvider, LoggerConfiguration loggerConfiguration)
     {
         loggerConfiguration.ReadFrom.Configuration(context.Configuration);
         
@@ -30,6 +43,10 @@ public class LoggerSetup
         loggerConfiguration.ReadFrom.Services(serviceProvider);
     }
 
+    /// <summary>
+    /// Configures the logger for the consumption of teh logger setup extnsions
+    /// </summary>
+    /// <param name="loggerConfiguration">The <see cref="LoggerConfiguration"/> instance to be setup</param>
     private static void Setup(LoggerConfiguration loggerConfiguration)
     {
         loggerConfiguration

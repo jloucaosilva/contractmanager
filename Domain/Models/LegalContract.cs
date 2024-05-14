@@ -36,7 +36,7 @@ public class LegalContract
     /// The contract creation date
     /// </summary>
     [Required]
-    public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+    public DateTimeOffset CreatedAt { get; set; }
     
     /// <summary>
     /// The contract update date (if any)

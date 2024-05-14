@@ -34,6 +34,7 @@ public class LegalContractRepository : ILegalContractRepository
         _logger.Information("{Tracer}|Inserting a legal contract", "53A130D1-CBAD-47BC-93BD-D44BB1B0CBC7");
         await using (var context = this._contextFactory.CreateContext())
         {
+            legalContract.CreatedAt = DateTimeOffset.UtcNow;
             var inserted = await context.LegalContracts.AddAsync(legalContract);
             await context.SaveChangesAsync();
             return inserted.Entity;

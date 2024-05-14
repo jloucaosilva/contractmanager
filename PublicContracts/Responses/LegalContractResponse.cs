@@ -2,6 +2,9 @@ using System;
 
 namespace PublicContracts.Responses;
 
+/// <summary>
+/// Legal contract response public contract response
+/// </summary>
 public class LegalContractResponse
 {
     /// <summary>

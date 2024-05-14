@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PublicContracts.Requests;
 
+/// <summary>
+/// Public contract request to update a legal contract
+/// </summary>
 public class UpdateLegalContractRequest
 {
     /// <summary>

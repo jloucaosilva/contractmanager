@@ -1,15 +1,12 @@
 using ContractManager.Server.Utilities;
 using DataAccessLayer.Repositories.Implementation;
 using DataAccessLayer.Repositories.Interfaces;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PublicContracts.Requests.Validators;
 using Serilog;
 using Serilog.Extensions.Logging;
 

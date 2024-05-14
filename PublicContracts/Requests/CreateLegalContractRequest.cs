@@ -2,6 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PublicContracts.Requests;
 
+/// <summary>
+/// Public contract request to create a legal contract
+/// </summary>
 public class CreateLegalContractRequest
 {
     /// <summary>
