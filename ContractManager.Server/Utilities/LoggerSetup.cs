@@ -12,7 +12,7 @@ namespace ContractManager.Server.Utilities;
 /// <summary>
 /// Extension methods for configuring the logger
 /// </summary>
-public class LoggerSetup
+public static class LoggerSetup
 {
     /// <summary>
     /// Configures the logger for the application
