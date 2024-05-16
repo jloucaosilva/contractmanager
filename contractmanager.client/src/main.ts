@@ -15,4 +15,4 @@ app.component("NavBar", NavBar);
 app.use(router);
 app.mount('#app');
 
-import "bootstrap/dist/js/bootstrap.bundle.min.js"
+import "bootstrap/dist/js/bootstrap.bundle.min.js";

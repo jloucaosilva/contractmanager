@@ -46,7 +46,7 @@ export default defineConfig({
             '^/legalcontracts': {
                 target,
                 secure: false,
-            }
+            },
         },
         port: 5173,
         https: {

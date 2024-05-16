@@ -36,4 +36,4 @@ export default createRouter({
             // We are leaving this as an example o fan alternative way to load a component
             component: () => import("@/legalcontracts/CreateContract.vue"),
         }],
-})
+});

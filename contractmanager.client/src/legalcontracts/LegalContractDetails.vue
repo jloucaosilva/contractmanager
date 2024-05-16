@@ -25,7 +25,7 @@ function fetchData(): void {
     headers: {
       'Content-Type': 'application/json',
       'X-Content-Type-Options': 'nosniff',
-    }
+    },
   })
       .then(r => r.json())
       .then(json => {

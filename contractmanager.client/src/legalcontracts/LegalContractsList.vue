@@ -26,7 +26,7 @@ function fetchData() {
     headers: {
       'Content-Type': 'application/json',
       'X-Content-Type-Options': 'nosniff',
-    }
+    },
   })
       .then(r => r.json())
       .then(json => {
@@ -41,7 +41,7 @@ async function deleteItem(id:string) :  Promise<void> {
     headers: {
       'Content-Type': 'application/json',
       'X-Content-Type-Options': 'nosniff',
-    }
+    },
   });
   if (response.ok) {
     toast('Legal Contract deleted successfully', {
