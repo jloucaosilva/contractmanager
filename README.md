@@ -21,5 +21,5 @@ It also has swagger capabilities accessible on the following endpoint "[Swagger 
 	 - this link will take you to swagger [Swagger UI](http://localhost:5020/swagger/index.html)
 	 - this one will take you to the  application [Front-end Vue3 TS](https://localhost:5173/)
  - As there is no data present on the in-memory database you'll have to create some to start
-	 - you can use the swagger interace
+	 - you can use the swagger interface
 	 - you can use the SPA application
