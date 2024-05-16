@@ -1,6 +1,6 @@
 @ContractManager.Server_HostAddress = http://localhost:5225
 
-GET {{ContractManager.Server_HostAddress}}/weatherforecast/
+GET {{ContractManager.Server_HostAddress}}/legalcontracts/
 Accept: application/json
 
 ###

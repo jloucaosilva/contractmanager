@@ -17,4 +17,8 @@ module.exports = {
     'semi': ['error', 'always'],
     'operator-linebreak': 0,
   },
+  env: {
+    node: true,
+    'vue/setup-compiler-macros': true,
+  },
 };
