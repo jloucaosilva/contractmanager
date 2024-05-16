@@ -23,3 +23,9 @@ It also has swagger capabilities accessible on the following endpoint "[Swagger 
  - As there is no data present on the in-memory database you'll have to create some to start
 	 - you can use the swagger interface
 	 - you can use the SPA application
+
+## Build status
+
+[![.NET Automatic build](https://github.com/jloucaosilva/contractmanager/actions/workflows/dotnet.yml/badge.svg)](https://github.com/jloucaosilva/ditate/actions/workflows/dotnet.yml)
+
+[![Manual build](https://github.com/jloucaosilva/contractmanager/actions/workflows/manual.yml/badge.svg)](https://github.com/jloucaosilva/ditate/actions/workflows/manual.yml)
